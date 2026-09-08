@@ -1,0 +1,106 @@
+:root {
+--twenyfive-clr: transparent ;
+--fifty-clr: #000;
+--seventyfive-clr:  #000;
+--hundred-clr: #000;
+}
+.all {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#container {
+    background-color: rgba(0, 162, 255, 0.932);
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    width: 403px;
+    height: 630px;
+    gap: 1.3rem;
+    flex-direction: column;
+    border-radius: 2%;
+    position: relative;
+    box-shadow: 5px 5px 15px rgb(0, 0, 0);
+}
+button {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #7577e6;
+    border-radius: 10%;
+    border: none;
+    color: white;
+    height: 77px;
+    font-size: 18px;
+    width: 82px;
+    margin-left: 13px;
+    margin-bottom: 10px;
+    position: relative;
+    transition:all 20ms;
+    outline:none; 
+}
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgb(19, 247, 255);
+    box-shadow: 1.5px 3px #757c75;
+    border-radius: 10%;
+
+    transition: transform 300ms ease-in-out ;
+    transform: scaleX(0);
+    transform-origin: center;
+} 
+button:hover::before {
+    transform: scaleX(1.03);
+}
+button {
+    z-index: 1;
+    cursor: pointer;
+}
+button:hover {
+    color: black;
+}
+#op {
+    background-color: #0004ff; 
+}
+#equal {
+    background-color:rgba(34, 206, 85, 0.993);
+}
+.clear {
+    background-color: #ff0000; 
+}
+form input{
+    outline:none; 
+    margin-top: 1rem;
+    width: 350px;
+    height:90px;
+    border: none;
+    border-radius: 10px;
+    font-size: 2.6rem;
+    text-align: right;
+    padding-right: 10px;
+    pointer-events: none;
+    font-family: monospace;
+    animation: blinking 1.5s infinite;
+}
+@keyframes blinking{
+25%{   color: var(--hundred-clr); }
+50%{   color:var(--fifty-clr) ; }
+75%{   color: var(--seventyfive-clr); }
+100%{  color: var(--twenyfive-clr);   }
+}
+.jimno {
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+}
+.jimno:hover {
+transform: scale(1.05);
+}
+.touchShow {
+    transform: scale(1.08);
+    border-color: #000000;
+    box-shadow: 0 0 5px #ff0000;
+}
